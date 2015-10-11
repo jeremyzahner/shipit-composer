@@ -6,13 +6,13 @@ var path = require('path');
  * - Emit composer_inited event.
  */
 
-module.exports = function (shipit) {
+module.exports = function (shipitInstance) {
 
-  utils.registerTask(shipit, 'composer:init', task);
+  utils.registerTask(shipitInstance, 'composer:init', task);
 
   function task() {
 
-    var shipit = utils.getShipit(shipit);
+    var shipit = utils.getShipit(shipitInstance);
 
     shipit.config = shipit.config || {};
     shipit.currentPath = shipit.config.deployTo ? path.join(shipit.config.deployTo, 'current') : undefined;
@@ -26,6 +26,6 @@ module.exports = function (shipit) {
 
     shipit.composer_inited = true;
     shipit.emit('composer_inited');
-    
+
   }
 };

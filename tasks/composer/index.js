@@ -6,12 +6,12 @@ var utils = require('shipit-utils');
  * - composer:install
  */
 
-module.exports = function (shipit) {
+module.exports = function (shipitInstance) {
 
-  var shipit = utils.getShipit(shipit);
+  var shipit = utils.getShipit(shipitInstance);
 
-  require('./init')(shipit);
-  require('./install')(shipit);
+  require('./init')(shipitInstance);
+  require('./install')(shipitInstance);
 
   shipit.on('deploy', function () {
 

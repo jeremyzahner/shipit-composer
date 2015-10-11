@@ -1,16 +1,17 @@
 var utils = require('shipit-utils');
+var sprintf = require('sprintf-js').sprintf;
 
 /**
  * Runs composer install
  */
 
-module.exports = function (shipit) {
+module.exports = function (shipitInstance) {
 
-  utils.registerTask(shipit, 'composer:install', task);
+  utils.registerTask(shipitInstance, 'composer:install', task);
 
   function task() {
 
-    var shipit = utils.getShipit(shipit);
+    var shipit = utils.getShipit(shipitInstance);
 
     function install(remote) {
 
@@ -51,11 +52,11 @@ module.exports = function (shipit) {
     }else {
       throw new Error(
         shipit.log(
-          'try to install composer before composer:install')
+          'try to install composer before composer:install'
         )
       );
     }
-  
+
   }
 
 };
