@@ -1,6 +1,16 @@
 # shipit-composer
 
-**Note: this plugin is in a very early alpha stage.
+[![Build Status](https://travis-ci.org/jeremyzahner/shipit-composer.svg)](https://travis-ci.org/jeremyzahner/shipit-composer)
+[![Dependency Status](https://david-dm.org/jeremyzahner/shipit-composer.svg)](https://david-dm.org/jeremyzahner/shipit-composer)
+[![devDependency Status](https://david-dm.org/jeremyzahner/shipit-composer/dev-status.svg)](https://david-dm.org/jeremyzahner/shipit-composer#info=devDependencies)
+
+**Note: this plugin is in a very early alpha stage.**
+
+**Roadmap**
+
+- Automatic installation of composer.
+- Better error catching.
+- Possibility to run any composer command.
 
 
 ## Install
@@ -25,6 +35,7 @@ Or you can run the tasks separatly :
 shipit staging composer:init composer:install
 
 ```
+
 
 ## Options `shipit.config.composer`
 
@@ -56,7 +67,6 @@ Default: `updated` or `fetched` (depending on `composer.remote` value)
 
 An event name that triggers `composer:install`. Can be set to false to prevent the `composer:install` task from listening to any events.
 
-
 ### Example `shipitfile.js` options usage
 
 ```js
@@ -77,6 +87,7 @@ module.exports = function (shipit) {
 };
 ```
 
+
 ## Workflow tasks
 
 - composer
@@ -95,9 +106,11 @@ module.exports = function (shipit) {
   - on Event "composer_inited"
     - Runs *composer:install* (Triggered on the `updated` or `fetched` event from [shipit-deploy](https://github.com/shipitjs/shipit-deploy) or by a custom `composer.triggerEvent` as mentioned above.)
 
+
 ## License
 
 MIT
+
 
 ## Contributing
 
