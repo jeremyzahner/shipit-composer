@@ -1,8 +1,7 @@
 # shipit-composer
 
 [![Build Status](https://travis-ci.org/jeremyzahner/shipit-composer.svg)](https://travis-ci.org/jeremyzahner/shipit-composer)
-[![Dependency Status](https://david-dm.org/jeremyzahner/shipit-composer.svg)](https://david-dm.org/jeremyzahner/shipit-composer)
-[![devDependency Status](https://david-dm.org/jeremyzahner/shipit-composer/dev-status.svg)](https://david-dm.org/jeremyzahner/shipit-composer#info=devDependencies)
+[![Dependency Status](https://www.versioneye.com/user/projects/561b8423a193340f320012d7/badge.svg?style=flat)](https://www.versioneye.com/user/projects/561b8423a193340f320012d7)
 
 **Note: this plugin is in a very early alpha stage.**
 
