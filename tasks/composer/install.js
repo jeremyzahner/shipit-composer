@@ -29,9 +29,10 @@ module.exports = function (shipitInstance) {
       var args = Array.isArray(shipit.config.composer.installArgs) ? shipit.config.composer.installArgs.join(' ') : shipit.config.composer.installArgs;
       var flags = Array.isArray(shipit.config.composer.installFlags) ? shipit.config.composer.installFlags.join(' ') : shipit.config.composer.installFlags;
       var AF = args ? flags ? args.concat(' ',flags) : args : flags ? flags : '';
-
+      var command = shipit.config.composer.composerCommand;
+      
       return shipit[method](
-        sprintf('cd %s && composer install %s', cdPath, AF)
+        sprintf('cd %s && %s install %s', cdPath, command, AF)
       );
 
     }

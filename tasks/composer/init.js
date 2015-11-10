@@ -21,6 +21,8 @@ module.exports = function (shipitInstance) {
     shipit.config.composer.installArgs = shipit.config.composer.installArgs || [];
     shipit.config.composer.installFlags = shipit.config.composer.installFlags || [];
 
+    shipit.config.composer.composerCommand = path.join(shipit.config.composer.composerCommand) !== undefined ? path.join(shipit.config.composer.composerCommand) : 'composer';
+
     var triggerEvent = shipit.config.composer.remote ? 'updated' : 'fetched';
     shipit.config.composer.triggerEvent = shipit.config.composer.triggerEvent !== undefined ? shipit.config.composer.triggerEvent : triggerEvent;
 

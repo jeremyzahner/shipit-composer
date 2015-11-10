@@ -66,6 +66,14 @@ Default: `updated` or `fetched` (depending on `composer.remote` value)
 
 An event name that triggers `composer:install`. Can be set to false to prevent the `composer:install` task from listening to any events.
 
+### `composer.composerFile`
+
+Type: `String`,
+Default: `composer`
+
+A simple string which gets converted to a path for adding a custom composer-file if the command is not present in the environment. (i.E. shared hosting).
+**Provide absolute path!**
+
 ### Example `shipitfile.js` options usage
 
 ```js
