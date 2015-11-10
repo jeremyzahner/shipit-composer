@@ -1,6 +1,6 @@
 {
   "name": "shipit-composer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Install composer packages",
   "main": "index.js",
   "repository": {
@@ -8,16 +8,16 @@
     "url": "https://github.com/jeremyzahner/shipit-composer.git"
   },
   "keywords": [
-      "npm",
-      "composer",
-      "shipit",
-      "shipit-deploy"
+    "npm",
+    "composer",
+    "shipit",
+    "shipit-deploy"
   ],
   "author": {
     "name": "Jeremy J. Zahner",
     "email": "me@jeremyzahner.com"
   },
-  "license": "MIT", 
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jeremyzahner/shipit-composer/issues"
   },
