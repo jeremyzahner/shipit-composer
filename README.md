@@ -66,7 +66,7 @@ Default: `updated` or `fetched` (depending on `composer.remote` value)
 
 An event name that triggers `composer:install`. Can be set to false to prevent the `composer:install` task from listening to any events.
 
-### `composer.composerFile`
+### `composer.composerCommand`
 
 Type: `String`,
 Default: `composer`
@@ -86,7 +86,8 @@ module.exports = function (shipit) {
     default: {
       composer: {
         remote: false,
-        installFlags: ['--no-dev', '--prefer-stable']
+        installFlags: ['--no-dev', '--prefer-stable'],
+        composerCommand: '/home/www-user/bin/composer.phar'
       }
     }
   });
